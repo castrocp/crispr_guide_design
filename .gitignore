@@ -1,0 +1,9 @@
+## data files
+##############
+*.bed
+*.txt
+*.fasta
+*.gz
+*.ps
+
+**/
