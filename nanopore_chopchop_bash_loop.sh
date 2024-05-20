@@ -1,5 +1,5 @@
 #!/bin/bash
-source /home/crmumm/miniconda3/etc/profile.d/conda.sh
+source /home/castrocp/miniconda3/etc/profile.d/conda.sh
 conda activate chopchop
 
 ## Changes with each experiment
@@ -54,7 +54,7 @@ do_chopchop() {
     LOC="$col1"."$col2_int"."$col3_int"
 
     # Upstream
-    python /home/crmumm/software/chopchop/chopchop.py \
+    python /home/castrocp/software/chopchop/chopchop.py \
       -Target "$col1":"$upstream_coods_start"-"$upstream_coods_end" \
       -BED \
       -GenBank \
@@ -76,7 +76,7 @@ do_chopchop() {
       --nonOverlapping | awk '$4 == "+" {print}' | head -n 25 >>"$OUTPUT"/"$LOC".upstream_"$distance".txt
 
     #downstream
-    python /home/crmumm/software/chopchop/chopchop.py \
+    python /home/castrocp/software/chopchop/chopchop.py \
     -Target "$col1":"$downstream_coods_start"-"$downstream_coods_end" \
     -BED \
     -GenBank \
